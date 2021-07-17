@@ -49,9 +49,9 @@ export default {
   },
 
   proxy: {
-    '/server': { target: 'https://fmesaed4lfed.usemoralis.com:2053/', pathRewrite: {'^/server': ''}},
-    '/axie': { target: 'https://axieinfinity.com/graphql-server-v2/graphql', pathRewrite: {'^/axie': ''} },
-    '/cryptoprice': { target: 'https://api.nomics.com/v1/currencies/ticker?key=0d187e865fb86612dbe90fa340f4d5c89edc1d74&filter=any&include-fiat=true&interval=1d,7d,30d,ytd,365d&quote-currency=USD&symbols=ETH,WETH', pathRewrite: {'^/cryptoprice': ''} },
+    '/server': { target: 'https://fmesaed4lfed.usemoralis.com:2053/', pathRewrite: {'^/server': ''},changeOrigin: true },
+    '/axie': { target: 'https://axieinfinity.com/graphql-server-v2/graphql', pathRewrite: {'^/axie': ''},changeOrigin: true },
+    '/cryptoprice': { target: 'https://api.nomics.com/v1/currencies/ticker?key=0d187e865fb86612dbe90fa340f4d5c89edc1d74&filter=any&include-fiat=true&interval=1d,7d,30d,ytd,365d&quote-currency=USD&symbols=ETH,WETH', pathRewrite: {'^/cryptoprice': ''},changeOrigin: true },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
