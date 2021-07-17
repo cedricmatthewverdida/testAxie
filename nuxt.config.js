@@ -45,14 +45,13 @@ export default {
 
   axios: {
     // proxyHeaders: false
+    proxy:true
   },
 
   proxy: {
-    '/server': { target: 'https://fmesaed4lfed.usemoralis.com:2053/', pathRewrite: {'^/server': ''} },
-    '/axie': { target: 'https://axieinfinity.com/graphql-server-v2/graphql', pathRewrite: {'^/axie': ''} },
-    '/cryptoprice': { target: 'https://nomics.com/data/currencies-ticker?filter=any&include-fiat=true&interval=1d,7d,30d,ytd,365d&quote-currency=USD&symbols=ETH,WETH', pathRewrite: {'^/cryptoprice': ''} },
-    '/contract': { target: 'http://localhost:3200/transact', pathRewrite: {'^/contract': ''} },
-    '/bodyparts': { target: 'https://axieinfinity.com/api/v2/body-parts?withMoveDetails=true', pathRewrite: {'^/bodyparts': ''} },
+    '/server': { target: 'https://fmesaed4lfed.usemoralis.com:2053/', pathRewrite: {'^/server': ''},changeOrigin: true },
+    '/axie': { target: 'https://axieinfinity.com/graphql-server-v2/graphql', pathRewrite: {'^/axie': ''},changeOrigin: true },
+    '/cryptoprice': { target: 'https://nomics.com/data/currencies-ticker?filter=any&include-fiat=true&interval=1d,7d,30d,ytd,365d&quote-currency=USD&symbols=ETH,WETH', pathRewrite: {'^/cryptoprice': ''},changeOrigin: true },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
