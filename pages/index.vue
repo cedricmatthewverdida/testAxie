@@ -411,7 +411,7 @@
           async currency_price(){
             const send = await this.$axios.get('/cryptoprice');
             const respo = await send.data;
-            this.price = respo.items;
+            this.price = respo;
           },
           classaxie : function (axie){
 

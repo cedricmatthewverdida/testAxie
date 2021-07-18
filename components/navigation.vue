@@ -52,7 +52,7 @@
                 </v-list-item-content>
                 </v-list-item>
 
-                <v-list-item>
+                <v-list-item @click="logout_metamask()">
                 <v-list-item-action>
                     <v-icon>mdi-logout</v-icon>
                 </v-list-item-action>
@@ -113,7 +113,8 @@
 </template>
 
 <script>
-    import { mapState } from 'vuex'
+    import { mapState,mapMutations } from 'vuex'
+    import Moralis from 'moralis'
     export default {
         
         computed:{
@@ -180,8 +181,14 @@
             updateRouter(val){
                 this.$router.push(val)
             },
-            
-            
+
+            ...mapMutations(['authorize_loggin']),
+            async logout_metamask() {
+                await Moralis.User.logOut();
+                this.authorize_loggin([]);
+                console.log("logged out");
+                this.$router.push('/')
+            }
         }
     }
 </script>

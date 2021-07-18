@@ -12,7 +12,7 @@
         </div>
 
         <div class="d-flex justify-center text-center">
-            <v-sheet width="500px" color="transparent">
+            <v-sheet width="400px" color="transparent">
             
             <h1>Welcome Player</h1>
 
