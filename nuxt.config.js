@@ -45,7 +45,7 @@ export default {
 
   axios: {
     // proxyHeaders: false
-    // proxy:true
+    proxy:true
   },
 
   proxy: {
@@ -73,7 +73,6 @@ export default {
     }
   },
   ssr:false,
-  target:'static',
   loading: {
     color: 'red',
     height: '5px'
