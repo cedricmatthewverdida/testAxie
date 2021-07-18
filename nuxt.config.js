@@ -73,6 +73,7 @@ export default {
     }
   },
   ssr:false,
+  target:'static',
   loading: {
     color: 'red',
     height: '5px'
