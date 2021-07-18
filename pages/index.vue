@@ -459,7 +459,7 @@
             const response = await this.$axios({
                 method: 'post',
 
-                url:'/axie',
+                url:'https://axieinfinity.com/graphql-server-v2/graphql',
                 data:{
                         "operationName":"GetAxieBriefList",
                         "variables":{
