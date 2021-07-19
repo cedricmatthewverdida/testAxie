@@ -541,7 +541,7 @@
         
         mounted(){
           this.load_axies();
-          this.currency_price();
+        //   this.currency_price();
         }
         
     }
